@@ -18,3 +18,9 @@ def missing_int(input: list[int])-> int:
       return i
   return len(input)
 
+def missing_int(input: list[int])-> int:
+  n = len(input)
+  gaussSum  = n * (n+1) // 2
+  actualSum = sum(input)
+  return gaussSum - actualSum
+      
