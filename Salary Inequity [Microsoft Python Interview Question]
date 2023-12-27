@@ -89,3 +89,10 @@ def min_inequity(salaries, n):
   if n > len(salaries):
     return 0 
   return max(salaries[0:n]) - min(salaries[0:n])
+
+def min_inequity(salaries, n):
+    if n >= len(salaries):
+        return 0 
+    sorted_salaries = sorted(salaries)
+    return max(sorted_salaries[:n]) - min(sorted_salaries[:n])
+
