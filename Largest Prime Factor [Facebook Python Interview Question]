@@ -1,0 +1,27 @@
+Largest Prime Factor [Facebook Python Interview Question]
+Given a target number, write a function to return the largest prime factor of that target number.
+
+For example, for the number 42, the prime factors are 2, 3, and 7, so we'd return 7 because that's the largest prime factor.
+
+For the number 25, it's prime factors are 5 and 5, so we'd return 5.
+Solution:
+def largest_prime_factor(target):
+  factors = []
+  divisor = 2
+  while target > 2:
+    while target % divisor == 0:
+      factors.append(divisor)
+      target //= divisor
+    divisor += 1
+  return factors[-1]
+  
+  """
+Solution
+def largest_prime_factor(target):
+  i = 2
+  while i * i <= target:
+      if (target % i) != 0:
+          i += 1
+      else:
+          target //= i
+  return target"""
