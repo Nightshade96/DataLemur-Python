@@ -35,7 +35,7 @@ def two_sum(input: list[int], target: int) -> list[int]:
     if diff in prevMap:
       return [prevMap[diff],i]
     prevMap[value] = i
-  return
+  return [-1,-1]
 
 	 
 """ Using brute force
